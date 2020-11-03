@@ -1,0 +1,329 @@
+html {
+   box-sizing: border-box;
+   font-family: Roboto;
+}
+ *, *:after, *:before {
+   box-sizing: inherit;
+}
+.container {
+   display: flex;
+   max-width: 960px;
+   background-color: #eaeaea;
+   margin: 20px auto;
+   justify-content: space-between;
+   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1)
+}
+.profile {
+   flex-basis: 36.5%;
+   background-color: #39383a;
+   color: #ababab;
+}
+.profile-photo {
+   height: 310px;
+   background-image:url('../img/CV3.png');
+   /* background-size: 350px; */
+   background-position: 50% 0%;
+   /* margin-top: 20px; */
+   background-repeat: no-repeat;
+}
+.profile-info {
+   padding: 40px 30px 40px;
+}
+.profile-text {
+   font-family: Roboto;
+   color: #ababab;
+   font-weight: 300;
+   line-height: 24px;
+   font-size: 13.4px;
+   margin-bottom: 0;
+}
+.heading {
+   font-family: "Open Sans";
+   margin: 0;
+   padding-bottom: 18px;
+   text-transform: uppercase;
+   font-weight: 500;
+}
+.heading-light {
+   font-size: 16px;
+   color: #fff;
+   border-bottom: 2px dashed #5a5a5a;
+}
+.contacts {
+   margin-bottom: 50px;
+}
+.contacts-item {
+   border-bottom: 2px dashed #5a5a5a;
+   padding-bottom: 24px;
+   padding-top: 24px;
+}
+.contacts-title {
+   font-family: "Open Sans";
+   font-weight: 600;
+   color: #fff;
+   margin-bottom: 13px;
+   font-size: 16px;
+}
+.contacts-text {
+   color: #ababab;
+   text-decoration: none;
+   padding-left: 30px;
+   line-height: 21px;
+   font-size: 13px;
+   font-family: "Open Sans";
+   font-weight: 300;
+}
+address {
+   font-style: normal;
+}
+.fas, .far, .fab {
+   margin-right: 10px; 
+}
+.languages {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   padding-top: 25px;
+}
+.language {
+   width: 100px;
+   height: 100px;
+   border: 6px solid #5c5c5c;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-bottom: 15px;
+   margin-right: 15px;
+}
+.language:nth-last-of-type(-n+2) {
+   margin-bottom: 0px;
+}
+.language:nth-last-of-type(n+3) {
+   margin-top: 55px;
+   
+}
+.language:nth-last-of-type(n+4) {
+   margin-top: 0px;
+   /* background-color: #fff; */
+}
+.language:nth-last-of-type(-2n+2) {
+   margin-top: -55px;
+   /* background-color: #fff; */
+}
+.language-text {
+   text-transform: uppercase;
+   font-size: 11px;
+   margin-bottom: 5px;
+}
+.language-per {
+   font-size: 15px;
+   font-weight: 600;
+}
+.resume {
+   padding: 25px 30px;
+   flex-basis: 61%;
+   background-color: #fff;
+}
+.resume-wrap {
+   padding: 36px 56px;
+   min-height: 100%;
+   border: 1px solid rgba(168, 168, 168, 0.44);
+}
+
+.logo {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 38px;
+}
+.logo-img {
+   width: 90px;
+   height: 90px;
+   border: 1px solid #39383a;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 19px;
+   color: #39383a;
+   font-family: "Open Sans";
+   font-weight: 700;
+ /*   letter-spacing: 4px; */
+}
+.logo-lines {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   margin-left: 17px;
+   margin-right: 17px;
+}
+.logo-line {
+   width: 43px;
+   height: 2px;
+   background-color: #39383a;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.logo-lines_left .logo-line:nth-child(2) {
+   margin-right: 20px; 
+   width: 55px;
+}
+.logo-lines_right .logo-line:nth-child(2) {
+   margin-left: 20px; 
+   width: 55px;
+}
+.about {
+   text-align: center;
+   border-bottom: 1px solid #e0e0e0;
+   padding-bottom: 25px;
+}
+.name {
+   color: #39383a;
+   font-family: Roboto;
+   font-size: 16px;
+   font-weight: 700;
+   letter-spacing: 10.75px;
+   line-height: 1;
+   text-transform: uppercase;
+   margin-bottom: 15px;
+}
+.position {
+   display: inline-block;
+   color: #808080;
+   font-family: "Open Sans";
+   font-size: 12px;
+   font-weight: 500;
+   text-transform: uppercase;
+   letter-spacing: 1.72px;
+   margin-bottom: 30px;
+}
+.about-address {
+ /*   display: inline-block; */
+   color: #39383a;
+   font-family: Roboto;
+   font-size: 13px;
+   font-weight: 400;
+   font-style: normal;
+   line-height: 20.97px;
+   letter-spacing: 0.83px;
+   line-height: 1;
+   margin-bottom: 8px;
+}
+.about-contacts {
+   font-size: 9px;
+}
+.about-contacts__link {
+   color: #777777;
+   font-family: Roboto;
+   line-height: 20.97px;
+   text-decoration: none;
+   margin-right: 10px;
+   margin-left: 10px;
+}
+
+.heading_dark {
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 1;
+   border-bottom: 1px solid #e0e0e0;
+   margin-bottom: 37px;
+}
+.heading_dark_first {
+   margin-top: 38px;
+}
+.list {
+   list-style: none;
+   padding-left: 0;
+   margin-top: 37px;
+   margin-bottom: 0;
+}
+.list-item {
+   position: relative;
+   padding-left: 40px;
+   padding-bottom: 30px;
+   margin-bottom: 30px;
+   border-bottom: 2px dashed #ececec;  ;
+}
+.list-item:before {
+   content: "";
+   width: 9px;
+   height: 9px;
+   border-radius: 50%;
+   background-color: #000;
+   position: absolute;
+   left: 0;
+   top:3px;
+}
+.list-item__borderless {
+   border: none;
+   margin-bottom: 0;
+}
+.list-item__title {
+   font-size: 14px;
+   text-transform: uppercase;
+   font-family: "Open Sans";
+   color: #39383a;
+   line-height: 1;
+   margin-bottom: 5px;
+}
+.list-item__date {
+   font-size: 11px;
+   text-transform: uppercase;
+   font-family: Roboto;
+   font-weight: 500;
+   color: #39383a;
+}
+.list-item__text {
+   margin-top: 19px;
+   color: #777777;
+   font-family: Roboto;
+   font-size: 12px;
+   line-height: 1.5;
+}
+.heading-skills {
+   margin-bottom: 48px;
+}
+.skills-list {
+   list-style: none;
+   padding-left: 0;
+   
+}
+.skills-list__item {
+   margin-bottom: 30px;
+   font-size: 13px;
+   display: flex;
+   justify-content: space-between;
+   font-weight: 700;
+   font-family: "Open Sans";
+}
+.consider {
+   font-family: "Open Sans";
+   color: #39383a;
+   font-size: 9px;
+   margin-top: 90px;
+}
+.level {
+   width: 70%;
+   height: 8px;
+   border: 1px solid #39383a;
+   position: relative;
+}
+.level:before {
+   position: absolute;
+   content: '';
+   left: 0;
+   top: 0;
+   height: 100%;
+   background-color: #898989;
+}
+.level-80:before {
+   width: 80%;
+}
+.level-85:before {
+   width: 85%;
+}
+.level-40:before {
+   width: 40%;
+}
