@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    
 </head>
+
 <body>
+    
     <div class="container">
         <div class="profile">
             <div class="profile-photo"></div>
@@ -51,20 +54,37 @@
                 <h2 class="heading heading-light">Languages</h2>  
                 <div class="languages">
                     <div class="language">
+                        <svg class="progress-ring" width="102" height="102">
+                            <circle class="progress-ring__circle progress-ring__circle-off" stroke="#09c"
+                            stroke-width="4" cx="51" cy="51" r="47.1" fill="transparent"/>
+                        </svg>  
                         <span class="language-text">English</span>
-                        <strong class="language-per">100%</strong>
+                        <strong class="language-per"><strong class="lang-num">100</strong>%</strong>
                     </div>
+                    
                     <div class="language">
+                        <svg class="progress-ring" width="102" height="102">
+                            <circle class="progress-ring__circle progress-ring__circle-off" stroke="#09c"
+                            stroke-width="4" cx="51" cy="51" r="47.1" fill="transparent"/>
+                        </svg>  
                         <span class="language-text">Ukrainian</span>
-                        <strong class="language-per">100%</strong>
+                        <strong class="language-per"><strong class="lang-num">100</strong>%</strong>
                     </div>
                     <div class="language">
+                        <svg class="progress-ring" width="102" height="102">
+                            <circle class="progress-ring__circle progress-ring__circle-off" stroke="#09c"
+                            stroke-width="4" cx="51" cy="51" r="47.1" fill="transparent"/>
+                        </svg>  
                         <span class="language-text">Russian</span>
-                        <strong class="language-per">100%</strong>
+                        <strong class="language-per"><strong class="lang-num">100</strong>%</strong>
                     </div>
                     <div class="language">
+                        <svg class="progress-ring" width="102" height="102">
+                            <circle class="progress-ring__circle progress-ring__circle-off" stroke="#09c"
+                            stroke-width="4" cx="51" cy="51" r="47.1" fill="transparent"/>
+                        </svg>  
                         <span class="language-text">Polish</span>
-                        <strong class="language-per">40%</strong>
+                        <strong class="language-per"><strong class="lang-num">40</strong>%</strong>
                     </div>
                 </div>
             </div>
@@ -94,6 +114,14 @@
                         <b>t</b>: +(48) 575 349 826</a> |
                         <a class="about-contacts__link" href="#">
                         <b>e</b>: aprystai.97@gmail.com</a> |
+                        <a class="about-contacts__link" href="#">
+                        <b>w</b>: www.github.com/Html-baka</a>
+                    </div>
+                    <div class="about-contacts about-contacts__mobile">
+                        <a class="about-contacts__link" href="#">
+                        <b>t</b>: +(48) 575 349 826</a>
+                        <a class="about-contacts__link" href="#">
+                        <b>e</b>: aprystai.97@gmail.com</a>
                         <a class="about-contacts__link" href="#">
                         <b>w</b>: www.github.com/Html-baka</a>
                     </div>
@@ -156,13 +184,25 @@
                     <h2 class="heading heading_dark heading-skills">skills</h2>
                     <ul class="skills-list">
                         <li class="skills-list__item">HTML
-                            <div class="level level-80"></div>
+                            <div class="level level-80">
+                                <svg class="level-svg" height="6" data-value="80">
+                                    <path class="meter" stroke="#09c"></path>
+                                </svg>
+                            </div>
                         </li>
                         <li class="skills-list__item">CSS
-                            <div class="level level-85"></div>  
+                            <div class="level level-85">
+                                <svg class="level-svg" height="6" data-value="70">
+                                    <path class="meter" stroke="#09c"></path>
+                                </svg>
+                            </div>  
                         </li>
                         <li class="skills-list__item">JavaScript
-                            <div class="level level-40"></div>  
+                            <div class="level level-40">
+                                <svg class="level-svg" height="6" data-value="50">
+                                    <path class="meter" stroke="#09c"></path>
+                                </svg>
+                            </div>  
                         </li>
                     </ul>
                 </div>
@@ -181,4 +221,6 @@
         </div>
     </div>
 </body>
+<script src="js/languageLevel.js" defer></script>
+<script src="js/skillsLevel.js" defer></script>
 </html>
