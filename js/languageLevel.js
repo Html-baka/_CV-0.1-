@@ -40,7 +40,7 @@ function checkScroll(){
       // console.log(window.innerHeight);
       let distanceFromTop = circle.getBoundingClientRect().top;
       let userDeviceHeight = window.innerHeight;
-         if (distanceFromTop - userDeviceHeight <= -96 && distanceFromTop >= 0 ) { //-96 because the height of the element is +-96px
+         if (distanceFromTop - userDeviceHeight <= -66 && distanceFromTop >= 0 ) { //-96 because the height of the element is +-96px
             // console.log('yatta');// run setProgress function
             setTimeout(() => {
                setProgress(elems[0].innerText);
