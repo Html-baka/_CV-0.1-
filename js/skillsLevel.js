@@ -28,7 +28,7 @@ window.onresize=function(){
 
 function loadProgress() {
    for (i = 0; i < svgPathAll.length; i++){
-      svgPathAll[i].style.transition = 'stroke-dashoffset ' + (1450 + i * 290) + 'ms ease-in-out 200ms';
+      svgPathAll[i].style.transition = 'stroke-dashoffset ' + (950 + i * 1000) + 'ms ease-in-out';
       let totalProgress = parseInt(divLength - ((divLength * dataAttr[i].getAttribute(['data-value'])) / 100));
       svgPathAll[i].style.strokeDashoffset = totalProgress;
    }
@@ -41,10 +41,10 @@ function checkSkill(){
    if (lockedSkill == false){
       let distanceFromTop = progressBar.getBoundingClientRect().top;
       let userDeviceHeight = window.innerHeight;
-         if (distanceFromTop - userDeviceHeight <= 0 && distanceFromTop >= 0) { //-96 because the height of the element is +-96px
+         if (distanceFromTop - userDeviceHeight <= -30 && distanceFromTop >= 0) { //-96 because the height of the element is +-96px
             setTimeout( () => {
                loadProgress();
-            }, 300);
+            }, 200);
             lockedSkill = true;
          }
    }  
