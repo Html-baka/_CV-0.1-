@@ -95,6 +95,22 @@ html {
    font-family: "Open Sans";
    font-weight: 300;
 }
+.cert-wrapper {
+   display: flex;
+   justify-content: center;
+   font-size: 14px;
+}
+.cert-wrapper > p{
+   margin: 0;
+}
+.cert-wrapper a{
+   text-decoration: none;
+   color: #ababab;
+   margin-right: 10px;
+}
+.cert-wrapper a:last-child{
+   margin-right: 0px;
+}
 address {
    font-style: normal;
 }
@@ -274,7 +290,7 @@ address {
 }
 .list-item__skills {
    margin-top: 19px;
-   color: #ababab;
+   color: #777777;
    font-family: Roboto;
    font-size: 13px;
    line-height: 1.6;
@@ -341,11 +357,22 @@ address {
    font-family: "Open Sans";
    line-height: 0.5;
 }
+.skills-list__item:first-child {
+   margin-bottom: 44px;
+}
+.skills-wrapper {
+   display: flex;
+   flex-direction: column;
+   line-height: 1;
+}
+.skills_under {
+   font-size: 9px;
+}
 .consider {
    font-family: "Open Sans";
-   color: #39383a;
+   color: #ababab;
    font-size: 9px;
-   margin-top: 110px;
+   margin-top: 170px;
 }
 .level {
    width: 70%;
@@ -381,6 +408,10 @@ address {
    /* stroke-dasharray: inherit; */
    /* transition: stroke-dashoffset 850ms ease-in-out; */
    /* d: path('M0 10, 220 10'); */
+}
+.other-skills {
+   display: flex;
+   justify-content: space-between;
 }
 @media (max-width: 1024px) {
    .container {
@@ -423,7 +454,10 @@ address {
    .language:nth-last-of-type(-2n+2) {
       margin-top: 0px;
    }
-
+   .consider {
+      margin-top: 50px;
+      
+   }
 }
 @media (max-width: 940px) {
    
@@ -470,7 +504,7 @@ address {
       display: block;
    }
    .consider {
-      margin-top: 70px;
+      /* margin-top: 70px; */
       font-size: 8px;
    }
 }
