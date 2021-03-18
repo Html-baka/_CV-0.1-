@@ -1,11 +1,15 @@
-const elems = document.querySelectorAll('.lang-num')
+import checkSkill from "./skillsLevel.js";
+
+const elems = document.querySelectorAll('.lang-num') 
+const circle = document.querySelector('.progress-ring__circle-off');
+const radius = circle.r.baseVal.value;
+const circumference = 2 * Math.PI * radius;
+
 function clearProgress(percent) {
-   for (i = 0; i < 4; i++) {
-      let circle = document.querySelectorAll('.progress-ring__circle');
-      let radius = circle[i].r.baseVal.value;
-      let circumference = 2 * Math.PI * radius;
+   for (let i = 0; i < elems.length; i++) {
+      const circle = document.querySelectorAll('.progress-ring__circle');
       circle[i].style.strokeDasharray = `${circumference} ${circumference}`;
-      circle[i].style.strokeDashoffset = circumference;
+
       let offset = circumference - percent / 100 * circumference;
       circle[i].style.strokeDashoffset = offset;
    }
@@ -13,13 +17,10 @@ function clearProgress(percent) {
 clearProgress(0);
 
 function setProgress(percent) {
-   document.querySelector('.progress-ring__circle-off').style.transition = 'stroke-dashoffset 3s';
-   let circle = document.querySelector('.progress-ring__circle-off');
-   let radius = circle.r.baseVal.value;
-   let circumference = 2 * Math.PI * radius;
-
+   const circle = document.querySelector('.progress-ring__circle-off');
+   circle.style.transition = 'stroke-dashoffset 3s';
+   
    circle.style.strokeDasharray = `${circumference} ${circumference}`;
-   circle.style.strokeDashoffset = circumference;
    
    let offset = circumference - percent / 100 * circumference;
    circle.style.strokeDashoffset = offset;
@@ -27,45 +28,32 @@ function setProgress(percent) {
    circle.classList.remove('progress-ring__circle-off');
 }
 
-
-let circle = document.querySelector('.progress-ring__circle-off');
-// console.log(circle.getBoundingClientRect().top);
-// console.log(window.innerHeight);
-
 let locked = false;
 function checkScroll(){
    if (locked == false){
-      // console.log(locked);
-      // console.log(circle.getBoundingClientRect().top);
-      // console.log(window.innerHeight);
-      let distanceFromTop = circle.getBoundingClientRect().top;
+      let distanceFromTop = circle.getBoundingClientRect().top; //counts distance from the top of the viewport to the first circle
       let userDeviceHeight = window.innerHeight;
-         if (distanceFromTop - userDeviceHeight <= -96 && distanceFromTop >= 0 ) { //-96 because the height of the element is +-96px
-            // console.log('yatta');// run setProgress function
+         if (distanceFromTop - userDeviceHeight <= 0 ) { //&& distanceFromTop >= 0 
             setTimeout(() => {
                setProgress(elems[0].innerText);
             }, 1000);
             setTimeout(() => {
                setProgress(elems[1].innerText);
-            }, 1300);
+            }, 1200);
             setTimeout(() => {
                setProgress(elems[2].innerText);
-            }, 1500);
+            }, 1400);
             setTimeout(() => {
                setProgress(elems[3].innerText);
-            }, 1700);
+            }, 1400);
             locked = true;
-            // console.log(locked);
          }
    }  
 }
 
 window.onscroll = function () {
    checkScroll();
-   checkSkill()
+   checkSkill();
 }
-
-// document.addEventListener('onscroll', checkScroll())
-// setInterval(() => {
-   
-// }, 2000);
+checkScroll();
+checkSkill();
