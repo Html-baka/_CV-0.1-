@@ -21,7 +21,6 @@ html {
 }
 .profile-photo {
    display: flex;
-   align-items: center;
    justify-content: center;
    position: relative;
    /* height: 305px;
@@ -373,7 +372,7 @@ address {
    font-family: "Open Sans";
    color: #ababab;
    font-size: 9px;
-   margin-top: 170px;
+   margin-top: 140px;
 }
 .level {
    width: 70%;
