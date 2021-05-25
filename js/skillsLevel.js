@@ -1,25 +1,30 @@
 const divLength = document.querySelector('.level').offsetWidth - 2;
-const svgPath = document.querySelector('.meter');
 const svgPathAll = document.querySelectorAll('.meter');
+const progressBar = document.querySelector('.level');
 let dataAttr = document.querySelectorAll('.level-svg');
-document.body.onload=function(){
+let lockedSkill = false;
+
+document.body.onload = function() {
    for (let i = 0; i < svgPathAll.length; i++){
       svgPathAll[i].style.transition = 'stroke-dashoffset 0ms ease-in-out';
       svgPathAll[i].style.strokeDashoffset = divLength;
-      svgPathAll[i].setAttribute("d", "M0 10, " + divLength +" 10");
-      svgPathAll[i].setAttribute("stroke-dasharray", divLength); //make 1 line with length = divLength
+      setAttributes(i, divLength); // take out similar logic in 1 function
    }   
 };
 
-window.onresize=function(){
+window.onresize = function() {
    for (let i = 0; i < svgPathAll.length; i++){
-      svgPathAll[i].style='';
       let divLength = document.querySelector('.level').offsetWidth - 2;
-      svgPathAll[i].setAttribute("d", "M0 10, " + divLength +" 10");
-      svgPathAll[i].setAttribute("stroke-dasharray", divLength); 
+      svgPathAll[i].style='';
+      setAttributes(i, divLength); // take out similar logic in 1 function
       svgPathAll[i].setAttribute("stroke-dashoffset", parseInt(divLength - ((divLength * (dataAttr[i].getAttribute(['data-value'])) / 100)))); 
    }
 };
+
+function setAttributes(i, divLength) {
+   svgPathAll[i].setAttribute("d", "M0 10, " + divLength +" 10");
+   svgPathAll[i].setAttribute("stroke-dasharray", divLength);   
+}
 
 function loadProgress() {
    for (let i = 0; i < svgPathAll.length; i++){
@@ -29,10 +34,9 @@ function loadProgress() {
    }
 }
 
-const progressBar = document.querySelector('.level');
-let lockedSkill = false;
-export default function checkSkill(){
-   if (lockedSkill == false){
+
+export default function checkSkill() {
+   if (lockedSkill == false) {
       let distanceFromTop = progressBar.getBoundingClientRect().top;
       let userDeviceHeight = window.innerHeight;
          if (distanceFromTop - userDeviceHeight <= 0) { 
